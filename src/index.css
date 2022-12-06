@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Axi";
+        src: url("./fonts/FontsFree-Net-sddd4.ttf")
+            format("truetype");
+    }
+    @font-face {
+        font-family: "Gotham";
+        src: url("./fonts/Gotham\ Pro\ Regular.ttf")
+            format("truetype");
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+    html {
+        font-family: "Axi";
+    }
+}
+
+@layer components {
+    .liNav {
+        @apply flex items-center mx-5 cursor-pointer; 
+    }
+    .btnNav {
+        @apply mx-5;
+    }
 }
